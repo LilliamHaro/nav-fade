@@ -55,7 +55,6 @@ function navToggle() {
   $('.nav-corner button span:nth-child(3)').toggleClass('nav-span-3')
 }
 
-
 $('#btn-nav-expand').on('click',function(e){
   navToggle()
 })
@@ -68,3 +67,13 @@ $('.menu-open .items li').on('click',function(e){
 $('.home button').on('click',function(e){
   console.log('123456')
 })  
+
+window.onload = function(e){
+  setTimeout(function(e){
+    $('#loader').addClass('opacity-0');
+    setTimeout(function(e){
+      $('#loader').addClass('d-none');
+    },500)
+  },4000)
+
+}
